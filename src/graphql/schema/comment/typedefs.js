@@ -16,6 +16,10 @@ export const commentTypedefs = gql`
     createComment(data: CreatedCommentInput!): Comment!
   }
 
+  extend type Subscription {
+    createdComment: Comment!
+  }
+
   input CreatedCommentInput {
     comment: String!
     postId: String!
